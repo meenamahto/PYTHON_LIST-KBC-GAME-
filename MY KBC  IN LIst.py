@@ -29,7 +29,7 @@ pall=[["1 four- 20%","2 nine-40%","3 seven- 80%","4 Eight- 99.9%"],
 ["1 1989- 70%","2 1990- 40%","3 1991- 90%","4 1992- 50%"],
 ["1 high level- 90%","2 interpreted- 60%","3 general purpose- 70%","4 all of the above- 99.1%"]
 ]
-experts=["1 teen dabi","2 vikash divyakirti","3 meenamma","4 miss arpita lataye"]
+experts=["1 teena dabi","2 vikash divyakirti","3 meenamma","4 miss arpita lataye"]
 i=0
 count=0
 s=0
@@ -49,54 +49,51 @@ while i<len(question):
         print("you have three lifeline:-\n" )
         print("1 50-50 lifeline\n2 audience pall\n3 experts pall")
         l=int(input("Enter your number of lifeline:"))
-        if count==0:
-            if l==1:
-                k=0
-                while k<len(li[i]):
-                    print(li[i][k])
-                    k+=1
-                print("chose any one answer which is given above\n")
-                a=int(input("Enter your answer:"))
-                if a==solution[i]:
-                    print("correct")
-                    s=s+1000
-                else:
-                    print("you lost the game\n")
-                    break
-                count+=1
-        if c==0:
-            if l==2:
-                k=0
-                while k<len(pall[i]):
-                    print(pall[i][k])
-                    k+=1
-                print("you want to go with audience\n")
-                a=int(input("Enter your answer:"))
-                if a==solution[i]:
-                    print("correct")
-                    s+=1000
-                else:
-                    print("you lost the game\n")
-                    break
-                c+=1
-        if b==0:
-            if l==3:
-                k=0
-                while k<len(experts):
-                    print(experts[k])
-                    k+=1
-                print("you want to go with expert\n")
-                e=int(input("Enter expert number:"))
-                if e<=4:
-                    print(solution[i])
-                a=int(input("Enter your answer:"))
-                if a==solution[i]:
-                    print("correct")
-                    s+=1000
-                else:
-                    print("you lost the game\n")
-                    break
-                b+=1
+        if l==1 and count==0:
+            k=0
+            while k<len(li[i]):
+                print(li[i][k])
+                k+=1
+            print("chose any one answer which is given above\n")
+            a=int(input("Enter your answer:"))
+            if a==solution[i]:
+                print("correct")
+                s=s+1000
+            else:
+                print("you lost the game\n")
+                break
+            count+=1
+        elif l==2 and c==0:
+            k=0
+            while k<len(pall[i]):
+                print(pall[i][k])
+                k+=1
+            print("you want to go with audience\n")
+            a=int(input("Enter your answer:"))
+            if a==solution[i]:
+                print("correct")
+                s+=1000
+            else:
+                print("you lost the game\n")
+                break
+            c+=1
+        elif l==3 and b==0:
+            k=0
+            while k<len(experts):
+                print(experts[k])
+                k+=1
+            print("you want to go with expert\n")
+            e=int(input("Enter expert number:"))
+            if e<=4:
+                print(solution[i])
+            a=int(input("Enter your answer:"))
+            if a==solution[i]:
+                print("correct")
+                s+=1000
+            else:
+                print("you lost the game\n")
+                break
+            b+=1
         else:
             print("you can use lifeline only once\n")
             a=int(input("Enter your answer:"))
@@ -118,5 +115,3 @@ while i<len(question):
     i=i+1
 print("thankyou for playing with us")
 print("you won the cheque of",s,"Rs.")
-       
-       
