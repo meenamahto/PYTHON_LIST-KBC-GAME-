@@ -115,3 +115,5 @@ while i<len(question):
     i=i+1
 print("thankyou for playing with us")
 print("you won the cheque of",s,"Rs.")
+       
+       
